@@ -282,8 +282,10 @@ def views_index():
 def security():
     return render_template('security.html')
 
+# Initialize DB on startup
+db_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'campus_trade.db')
+if not os.path.exists(db_path):
+    init_db()
+
 if __name__ == '__main__':
-    db_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'campus_trade.db')
-    if not os.path.exists(db_path):
-        init_db()
     app.run(debug=True, host='0.0.0.0', port=5000)
