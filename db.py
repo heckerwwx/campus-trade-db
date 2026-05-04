@@ -1,6 +1,7 @@
 import sqlite3
 import os
 
+# Use absolute path based on this file's location
 DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'campus_trade.db')
 
 def get_db():
