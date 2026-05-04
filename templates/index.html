@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block title %}首页 - 校园二手交易平台{% endblock %}
+{% block page_title %}首页{% endblock %}
+{% block page_desc %}欢迎使用校园二手交易平台{% endblock %}
+{% block content %}
+<div class="hero">
+    <h1>校园二手交易平台</h1>
+    <p>基于 SQLite + Flask 的数据库课程设计项目</p>
+</div>
+
+<div class="stat-grid">
+    <div class="stat-card">
+        <div class="stat-icon primary">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+        </div>
+        <div class="stat-info">
+            <h4>5+</h4>
+            <p>商品总数</p>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon success">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+        </div>
+        <div class="stat-info">
+            <h4>4</h4>
+            <p>注册用户</p>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon warning">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+        </div>
+        <div class="stat-info">
+            <h4>2+</h4>
+            <p>订单数量</p>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon accent">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </div>
+        <div class="stat-info">
+            <h4>7</h4>
+            <p>查询功能</p>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            快速导航
+        </h3>
+    </div>
+    <div class="card-body">
+        <div class="quick-links">
+            <a href="/items" class="quick-link">
+                <div class="icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="26" height="26"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                </div>
+                <h3>商品管理</h3>
+                <p>查看、添加、修改商品</p>
+            </a>
+            <a href="/users" class="quick-link">
+                <div class="icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="26" height="26"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                </div>
+                <h3>用户列表</h3>
+                <p>查看所有注册用户</p>
+            </a>
+            <a href="/orders" class="quick-link">
+                <div class="icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="26" height="26"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                </div>
+                <h3>订单列表</h3>
+                <p>查看交易订单详情</p>
+            </a>
+            <a href="/query" class="quick-link">
+                <div class="icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="26" height="26"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+                <h3>数据查询</h3>
+                <p>基本查询与连接查询</p>
+            </a>
+            <a href="/aggregate" class="quick-link">
+                <div class="icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="26" height="26"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                </div>
+                <h3>聚合统计</h3>
+                <p>分组统计与分析</p>
+            </a>
+            <a href="/views" class="quick-link">
+                <div class="icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="26" height="26"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                </div>
+                <h3>数据视图</h3>
+                <p>已售/未售商品视图</p>
+            </a>
+            <a href="/security" class="quick-link">
+                <div class="icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="26" height="26"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <h3>安全文档</h3>
+                <p>安全性与并发说明</p>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
